@@ -1,0 +1,390 @@
+@import 'reset.scss'; 
+body{
+    font-family: 'Rubik', sans-serif;
+    background-color:  #230E2B;
+
+    max-height: 100vh;
+ }
+ a, p{
+    text-decoration: none;
+    color: white;
+}
+h1{
+    color: white;
+
+}
+.blob1{
+    width: 300px;
+    position: absolute;
+    justify-content: left;
+    top:0; 
+    left:0 ;
+    rotate:45deg;
+}
+.blob2{
+    position: absolute;
+    justify-content: right;
+    width: 350px;
+    top:0;
+    right: 0;
+}
+.container {
+    max-height: 100vh;
+     max-width: 1920px;
+ 
+     margin: 0 auto;
+ 
+     // background-image: url(../img/Ellipse.svg);
+   
+     
+ }
+ 
+ header{
+    min-height: 100%;
+    max-width: 1180px;
+     padding: 10px 300px 10px 300px;
+}
+.header__row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+.header__row-logo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-size: cover;
+   a{
+       padding: 30px;
+   }
+  
+}
+.logo{
+    height: 70px;
+}
+.header__register {
+       margin: 18px;
+       color: white;
+       display: flex;
+       justify-content: space-between;
+       flex-direction: row;
+     
+}
+.Meeting {
+    margin-top: 15px;
+    padding-right:20px ;
+    font-weight: 400;
+    font-size: 12px;
+  
+}
+
+.registration__link {
+    margin-top: 3px;
+    position: relative;
+  padding: 10px 20px 10px 20px;
+  border-radius: 500px;
+  background:#230E2B;
+  border: 1px solid #230E2B;
+  border-radius: 50px;
+ 
+}
+
+.registration__link::before{
+    content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(35deg, #EE0979 0%, #FF6A00 100%);
+  border-radius: 34px;
+  z-index: -2;
+}
+
+main{
+    max-height: 100vh;
+     min-width: 100%;
+     padding: 100px 0 0 0;
+ }
+ 
+ .main__text {
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+ }
+ .main__text-title {
+     font-weight: 500;
+     font-size: 45px;
+ }
+ .main__text-subtext {
+  
+     padding: 20px;
+ margin: 0 auto;
+  width: 800px;
+ 
+ }
+ .forms{
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     align-items: center;
+ }
+ 
+ .email{
+     display: block;
+     font-weight: 400;
+     background-color: #42204E;
+     border:none;
+     margin: 10px;
+     width: 300px;
+     padding: 20px 30px 20px 10px;
+     border-radius:500px ;
+     color:#8B5D9A;
+     text-align: center;
+     font-size: 16px;
+    
+ }
+ .email::placeholder{
+     font-family: 'Rubik', sans-serif;
+   color:#8B5D9A;
+   margin-right: 35px;
+ }
+ .email__div{
+     position: relative;
+ 
+ }
+   .email__svg {
+       position: absolute;
+       margin: 34px 0 0 125px;
+       z-index: 1; 
+ }
+ 
+ .password__div {
+     position: relative;
+   
+ }
+ .password {
+     display: block;
+     font-weight: 400;
+     background-color: #42204E;
+     border:none;
+     margin: 10px;
+     width: 300px;
+     padding: 20px 30px 20px 10px;
+     border-radius:500px ;
+     color:#8B5D9A;
+     text-align: center;
+     font-size: 16px;
+    
+ }
+ 
+ .password::placeholder{
+     font-family: 'Rubik', sans-serif;
+   color:#925FA4;
+   margin-right: 135px;
+  
+ 
+ }
+ .password__svg {
+     position: absolute;
+     margin: 109px 0 0 125px;
+    
+ }
+ 
+ .blob1, .blob2 {
+    
+ }
+ 
+ .forms__signin{
+  
+     text-align: center;
+     display: block;
+     font-weight: 400;
+     background-color: #42204E;
+     border:none;
+     margin: 10px;
+     width: 300px;
+     padding: 20px 15px 20px 15px;
+     border-radius:500px ;
+     color:#8B5D9A;
+     text-align: center;
+     font-size: 16px;
+     background:  linear-gradient(90deg, #EE0979 0%, #FF6A00 100%);
+     box-shadow: 0px 20px 30px rgba(179, 34, 31, 0.2);
+     margin-bottom: 30px;
+ } 
+ 
+ .forms__nopassword-link{
+  
+     color: #653a75;
+ }
+ 
+ .forms__footer {
+     display: flex;
+     flex-direction: row;
+    
+ }
+ .forms__footer-li {
+     text-decoration: none;
+     color: white;
+ }
+ .forms__shadow{ 
+ top: -1px;
+     z-index: -1;
+     position: absolute;
+     width: 800px;
+ height: 800px;
+     border-radius: 100%;
+     background: #381A42;
+ filter: blur(200px);
+ }
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ .modal{ 
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0; 
+    top:0; 
+    background-color: transparent; 
+    z-index: 2; 
+    transform: translateY(-44.5%) scale(0); 
+    transition: .4s ease-in-out; 
+} 
+.modal.active{ 
+    transform: translateY(0%)scale(100%); 
+    background-color: rgba(0, 0, 0, .5); 
+} 
+.modal_container{ 
+    display: flex; 
+    width: 100%; 
+    height: 100%; 
+} 
+.modal_body{ 
+    margin: auto; 
+    width: 500px; 
+    background-color: #230E2B; 
+    border-radius: 10px; 
+    text-align: center; 
+    padding: 100px 15px 50px 15px; 
+    position: relative; 
+    color:white;
+} 
+.modal_body p{ 
+   
+    font-size: 20px; 
+} 
+ 
+.click{ 
+    display: flex;
+    margin: 6px auto 30px;
+    cursor: default;
+    width: 280px;
+    font-size: 20px;
+    height: 25px;
+    padding: 13px;
+    /* margin: 0px 18px 18px 0px; */
+} 
+.continue{ 
+    display: flex;
+    margin: 6px auto 30px;
+    cursor: default;
+    width: 170px;
+    height: 30px;
+    font-size: 20px;
+    padding: 10px;
+    
+} 
+
+.input_text {
+    margin: 0;
+    border-radius: 40px;
+}
+.modal_body button{ 
+    cursor: pointer; 
+    display: block; 
+    width: 330px; 
+    margin: 60px auto 0px auto; 
+    padding: 20px 0px; 
+    font-size: 16px; 
+    border: none; 
+    color: #ffff; 
+    border-radius: 10px; 
+    background: linear-gradient(90deg, #EE0979 0%, #FF6A00 100%); 
+    
+} 
+.modal_close{ 
+    color: white;
+    cursor: pointer; 
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    font-size: 21px; 
+}
+
+
+
+
+
+
+
+
+  
+  
+
+@media (max-width:500px){
+    .container{
+        max-width: 390px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .forms__shadow{
+        display: none;
+    }
+    .header__row-logo{
+       
+    }
+    .main{
+       padding: 1px;
+    }
+    .blob1, .blob2{
+        display: none;
+    }
+    .main__text-subtext{
+        max-width: 300px;
+    }
+
+    header{
+        display: block;
+        padding: 0;
+        justify-content: left;
+    }
+    .Meeting{
+        display: none;
+    }
+    .name{
+        font-weight: 500;
+    }
+    .logo{
+       display: none;
+    }
+    .modal_body{
+        width: 300px;
+    }
+    .modal_body button{
+        width: 300px;
+    }
+    .modal_body input{
+        width: 200px;
+    }
+}
